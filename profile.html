@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a0ddb4;
+            padding: 20px;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .profile-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-section {
+            margin-bottom: 20px;
+        }
+        .profile-section h2 {
+            border-bottom: 1px solid #24bd69;
+            padding-bottom: 5px;
+        }
+        .profile-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .profile-section ul li {
+            margin-bottom: 5px;
+        }
+        .profile-picture {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-picture img {
+            max-width: 200px;
+            border-radius: 50%;
+            border: 2px solid #24bd69;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #24bd69;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Mi Perfil</h1>
+
+        <!-- Información Personal -->
+        <div class="profile-picture">
+            <img src="tu-imagen.jpg" alt="Foto de perfil">
+        </div>
+        <div class="profile-section">
+            <h2>Información Personal</h2>
+            <p><strong>Nombre:</strong> Claudia Arellano</p>
+            <p><strong>Edad:</strong> 21 años</p>
+            <p><strong>Ubicación:</strong> Lima, Perú</p>
+        </div>
+
+        <!-- Información de Contacto -->
+        <div class="profile-section">
+            <h2>Información de Contacto</h2>
+            <p><strong>Correo Electrónico:</strong> arellano26@gmail.com</p>
+            <p><strong>Teléfono:</strong> +51 957593671</p>
+        </div>
+
+        <!-- Intereses -->
+        <div class="profile-section">
+            <h2>Intereses</h2>
+            <ul>
+                <li>Deportes</li>
+                <li>Lectura</li>
+                <li>Música</li>
+            </ul>
+        </div>
+        <button class="button" id="backButton">Retroceder</button>
+
+    </div>
+    <script>
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Reemplaza 'index.html' con la  página de inicio
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contactos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #98efbf;
+            padding: 20px;
+        }
+        .contact-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .contact-card h2 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .contact-card p {
+            margin: 5px 0;
+        }
+        .contact-actions {
+            margin-top: 10px;
+        }
+        .contact-actions a {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-actions a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #24bd69;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-card">
+        <h2>Jhossua</h2>
+        <p>Número: +51923770390</p>
+        <div class="contact-actions">
+            <a href="tel:+51923770390">Llamar</a>
+            <a href="sms:+51923770390">Enviar SMS</a>
+        </div>
+    </div>
+
+    <div class="contact-card">
+        <h2>Jerson</h2>
+        <p>Número: +51918315221</p>
+        <div class="contact-actions">
+            <a href="tel:+51918315221">Llamar</a>
+            <a href="sms:+51918315221">Enviar SMS</a>
+        </div>
+    </div>
+    <div class="contact-card">
+        <h2>Alvaro</h2>
+        <p>Número: +51946997443</p>
+        <div class="contact-actions">
+            <a href="tel:+51946997443">Llamar</a>
+            <a href="sms:+51946997443">Enviar SMS</a>
+        </div>
+    </div>
+    <button class="button" id="backButton">Retroceder</button>
+    <script>
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'menu.html'; // Reemplaza 'index.html' con la  página de inicio
+        });
+    </script>
+
+    <!-- Puedes agregar más tarjetas de contacto según sea necesario -->
+
+</body>
+</html>

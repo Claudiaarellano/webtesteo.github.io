@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Emergencia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #98efbf;
+            padding: 20px;
+        }
+        .emergency-container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .emergency-container h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .child-info {
+            margin-bottom: 20px;
+            text-align: center;
+            
+        }
+        .child-info img {
+            max-width: 50%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .map-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #24bd69;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .map-button:hover {
+            background-color: #0056b3;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #24bd69;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="emergency-container">
+        <h2>Información</h2>
+
+        <div class="child-info">
+            <img src="fotonino.jpg" alt="Imagen del niño">
+            <p><strong>Nombre:</strong> Kael Huaman</p>
+            <p><strong>Edad:</strong> 5 años</p>
+            <p><strong>Grupo Sanguíneo:</strong> O+</p>
+            <p><strong>Altura:</strong> 1.10 cm</p>
+            <p><strong>Peso:</strong> 29 Kg</p>
+          
+        </div>
+
+        <a href="https://www.google.com/maps/@-12.1814678,-76.9297349,15z?authuser=1&entry=ttu" class="map-button" target="_blank" id="buscar-button">Buscar</a>
+        
+        <button class="button" id="backButton">Retroceder</button>
+
+    </div>
+    <script>
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'menu.html'; // Reemplaza 'index.html' con la  página de inicio
+        });
+    </script>
+    <script>
+        document.getElementById('buscar-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Evitar que el enlace recargue la página
+
+            // Mostrar alerta de que se encuentra a 5 minutos
+            alert('El niño se encuentra a aproximadamente 5 minutos de distancia.');
+
+            // Redirigir a Google Maps
+            var coordenadas = { lat: 40.730610, lng: -73.935242 }; // Coordenadas de ejemplo (Nueva York)
+            var url = 'https://www.google.com/maps/search/?api=1&query=' + coordenadas.lat + ',' + coordenadas.lng;
+            window.location.href = url;
+        });
+    </script>
+</body>
+</html>
